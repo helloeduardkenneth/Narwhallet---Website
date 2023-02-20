@@ -311,7 +311,7 @@ img {
 .person {
   --transform-speed: 250ms;
   position: relative;
-  max-width: 25rem;
+  max-width: 15rem;
   margin-inline: auto;
 }
 
