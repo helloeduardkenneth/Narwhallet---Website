@@ -492,7 +492,9 @@ img {
     text-justify: inter-word;
     font-size: 12px;
   }
-  
+  .person .mb-4 {
+    margin: 0 !important;
+  }
 }
 
 /* About Us Ends */
