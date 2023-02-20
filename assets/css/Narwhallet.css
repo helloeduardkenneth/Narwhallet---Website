@@ -482,6 +482,10 @@ img {
     font-size: 12px;
     line-height: 20px;
   }
+
+  .person__container {
+    margin: 50px 0 !important;
+  }
   
   .alex-subheading, .michael-subheading {
     text-align: justify;
