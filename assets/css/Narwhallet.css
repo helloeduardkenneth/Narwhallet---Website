@@ -440,7 +440,7 @@ img {
 
 .person__img {
   position: relative;
-  z-index: 2;
+  z-index: 99999999999;
   transform: scale(1.4);
   transition: transform var(--transform-speed) ease-in-out;
 }
