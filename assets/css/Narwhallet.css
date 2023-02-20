@@ -485,9 +485,23 @@ img {
   }
 
   .person {
-    padding-top: 20px !important;
+    padding-top: 30px !important;
     margin: 40px auto !important;
     max-width: 15rem;
+  }
+
+  .person__container:hover {
+    transform: scale(1);
+  }
+
+  .person__container:hover .person__img {
+    transform: 
+      scale(1)
+      translateY(0);
+  }
+
+  .person__img {
+    transform: scale(1.4);
   }
   
   .alex-subheading, .michael-subheading {
