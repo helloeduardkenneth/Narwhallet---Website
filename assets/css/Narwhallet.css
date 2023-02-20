@@ -485,6 +485,7 @@ img {
   }
 
   .person {
+    padding-top: 20px !important;
     margin: 40px auto !important;
     max-width: 12rem;
   }
