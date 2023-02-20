@@ -481,10 +481,12 @@ img {
   .team-subheading {
     font-size: 12px;
     line-height: 20px;
+    margin-bottom: 20px;
   }
 
   .person {
-    margin: 50px auto !important;
+    margin: 40px auto !important;
+    max-width: 12rem;
   }
   
   .alex-subheading, .michael-subheading {
