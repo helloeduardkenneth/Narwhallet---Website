@@ -312,7 +312,6 @@ a {
     width: 30%;
     margin-bottom: 1rem;
     flex: 50%;
-    
   }
 
   .partners {
@@ -358,6 +357,20 @@ a {
   font-family: var(--body-font-family);
 }
 
+@media screen and (max-width: 767px) {
+  #about {
+    padding: 50px 20px;
+  }
+  #about h1 {
+    font-size: var(--h4-font-size);
+  }
+  #about p {
+    font-size: 12px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}
+
 /* About Us Ends */
 
 /* About Us Starts */
@@ -365,6 +378,27 @@ a {
 #team {
   background-color: var(--section-bg-color);
   padding: 100px 0;
+}
+
+.team-heading {
+  color: #1C2331;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: var(--h1-font-size);
+  font-family: var(--body-font-family);
+  background-color: #0093E9;
+  background-image: linear-gradient(to right top, #0093E9 0%, #80D0C7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.team-subheading {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 75px;
+  font-family: var(--body-font-family);
+  color: var(--dark-color);
 }
 
 img {
@@ -440,10 +474,21 @@ img {
   #team {
     padding: 50px 25px;
   }
+
+  .team-heading {
+    font-size: var(--h4-font-size);
+  }
+  .team-subheading {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  
   .alex-subheading, .michael-subheading {
     text-align: justify;
     text-justify: inter-word;
+    font-size: 12px;
   }
+  
 }
 
 /* About Us Ends */
@@ -744,11 +789,12 @@ img {
   font-weight: 500;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .contact-details-info {
     display: flex !important;
     flex-direction: column !important;
     align-items: center;
+
   }
 }
 
@@ -768,12 +814,14 @@ img {
   font-family: var(--body-font-family);
   font-weight: var(--font-weight-bold);
   color: var(--white-color);
+  margin-bottom: 0;
 }
 
 .contact-info {
   display: flex;
   justify-content: space-around;
   max-width: 800px;
+  margin: 20px 0;
 }
 
 .info-item {
@@ -846,7 +894,13 @@ input::placeholder, textarea::placeholder {
     flex-direction: row;
     align-items: start;
   }
-
+  .info-item {
+    margin: 10px 0;
+    padding: 0;
+  }
+  .info-item i, .info-item p {
+    font-size: 14px;
+  }
 }
 
 /* Set the font-size of the form elements to 16px on small screens */
