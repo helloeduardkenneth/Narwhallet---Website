@@ -624,7 +624,6 @@ img {
   display: flex;
   justify-content: space-around;
   max-width: 800px;
-  margin: 0 auto;
 }
 
 .info-item {
@@ -649,16 +648,81 @@ img {
   font-weight: 500;
 }
 
+form {
+  background-color: #fff;
+  border: 1px solid #BDBDBD;
+  padding: 20px !important;
+  border-radius: 10px;
+  font-family: var(--body-font-family);
+}
+
+input::placeholder, textarea::placeholder {
+  font-size: 12px !important;
+}
+
+.form-check-label {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.submit-btn {
+  border: none;
+  width: 200px;
+  margin: 0 auto;
+  padding: 15px 0;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+  background: #4CAF50;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  color: var(--white-color);
+  background-color: var(--dark-color);
+}
+
 @media screen and (max-width: 768px) {
+
+  #contact {
+    padding: 50px 30px;
+  }
+
   .contact-heading {
     font-size: var(--h4-font-size);
   }
 
   .contact-info {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items: start;
+  }
+
+
+}
+
+/* Set the font-size of the form elements to 16px on small screens */
+@media screen and (max-width: 576px) {
+  form {
+    font-size: 16px;
   }
 }
+
+/* Reduce the size of the form groups on small screens */
+@media screen and (max-width: 576px) {
+  .form-group {
+    margin-bottom: 10px;
+  }
+}
+
+/* Center the submit button on small screens */
+@media screen and (max-width: 576px) {
+  button[type="submit"] {
+    margin: 10px auto 0;
+    display: block;
+  }
+}
+
 
 /* Contact Ends */
