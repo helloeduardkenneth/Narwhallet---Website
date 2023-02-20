@@ -248,6 +248,7 @@ a {
   aspect-ratio: 3/2;
   object-fit: contain;
   filter: brightness(0) invert(1);
+  margin: 0 auto;
 }
 
 .partners img:hover {
