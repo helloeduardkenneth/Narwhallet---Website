@@ -376,7 +376,7 @@ img {
 /* Services Starts */
 
 #services {
-  background-color: var(--section-bg-color);
+  background-color: var(--white-color);
   padding: 100px 0;
 }
 
@@ -458,6 +458,11 @@ img {
 /* Services Ends */
 
 /* Card Starts */
+
+#features {
+  background-color: var(--section-bg-color);
+  padding: 100px 0;
+}
 
 .title-card h4 {
   text-align: center;
@@ -602,6 +607,50 @@ img {
 
 /* CTA Ends */
 
+/* Contact Details Starts */
+
+#contact-details {
+  padding: 20px 0;
+}
+
+.contact-details-info {
+  display: flex;
+  justify-content: space-around;
+  max-width: 800px;
+}
+
+.info-details-item {
+  display: flex;
+  align-items: center;
+  margin: 15px;
+}
+
+.info-details-item i {
+  font-size: 24px;
+  margin-right: 10px;
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.info-details-item p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-details-info {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+  }
+}
+
+
+
 /* Contact Starts */
 
 #contact {
@@ -662,7 +711,7 @@ input::placeholder, textarea::placeholder {
 
 .form-check-label {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .submit-btn {
