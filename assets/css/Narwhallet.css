@@ -784,8 +784,9 @@ img {
 
 .contact-details-info {
   display: flex;
+  flex-direction: column;
+  align-items: start;
   justify-content: space-around;
-  max-width: 800px;
 }
 
 .info-details-item {
@@ -793,6 +794,8 @@ img {
   align-items: center;
   margin: 15px;
 }
+
+
 
 .info-details-item i {
   font-size: 24px;
@@ -810,12 +813,29 @@ img {
   font-weight: 500;
 }
 
+.aique-logo {
+  display: flex;
+  align-self: center;
+  justify-content: flex-end;
+}
+
+.aique-logo img {
+  width: 40%;
+}
+
+
 @media screen and (max-width: 767px) {
   .contact-details-info {
     display: flex !important;
     flex-direction: column !important;
     align-items: center;
-
+  }
+  .aique-logo {
+    display: flex !important;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    margin: 40px auto;
   }
 }
 
@@ -900,6 +920,7 @@ input::placeholder, textarea::placeholder {
   background-color: var(--dark-color);
 }
 
+
 @media screen and (max-width: 768px) {
 
   #contact {
@@ -915,6 +936,7 @@ input::placeholder, textarea::placeholder {
     flex-direction: row;
     align-items: start;
   }
+  
   .info-item {
     margin: 10px 0;
     padding: 0;
@@ -946,5 +968,41 @@ input::placeholder, textarea::placeholder {
   }
 }
 
-
 /* Contact Ends */
+
+/* Contact Modal Starts */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
