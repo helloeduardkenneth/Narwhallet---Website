@@ -39,12 +39,19 @@
 body, html {
   margin: 0;
   padding: 0;
+  font-family: var(--body-font-family);
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+
+
+li {
+  list-style-type: none;
 }
 
 /* Section - Background Color */
@@ -708,12 +715,17 @@ img {
     margin: 20px;
     padding: 0;
     display: flex;
-    overflow-x: scroll;
+    overflow-x: auto;
     justify-content: unset;
   }
   
   .card-container::-webkit-scrollbar {
-    width: 0; /* hide the scrollbar in WebKit browsers */
+    width: 20% !important; /* hide the scrollbar in WebKit browsers */
+  }
+
+  .card-container::-webkit-scrollbar-thumb {
+    height: 10px !important;
+    
   }
 
   .card {
@@ -813,17 +825,6 @@ img {
   font-weight: 500;
 }
 
-.aique-logo {
-  display: flex;
-  align-self: center;
-  justify-content: flex-end;
-}
-
-.aique-logo img {
-  width: 40%;
-}
-
-
 @media screen and (max-width: 767px) {
   .contact-details-info {
     display: flex !important;
@@ -921,7 +922,7 @@ input::placeholder, textarea::placeholder {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
   #contact {
     padding: 50px 30px;
@@ -970,39 +971,89 @@ input::placeholder, textarea::placeholder {
 
 /* Contact Ends */
 
-/* Contact Modal Starts */
+/* Footer Starts */
 
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
+.footer {
+  background-color: #1E1E1E;
+  padding: 69px 104px 40px 104px !important;
+}
+
+.description {
+  color: var(--white-color);
+  font-size: 14px !important;
+}
+
+.i {
+  color: var(--white-color);
+}
+
+.span {
+  color: var(--white-color);
+}
+
+.border-bottom {
+  border-bottom: 5px solid var(--white-color);
   width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  text-align: center;
+.copyright {
+  color: var(--white-color);
 }
 
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+.footer-logo {
+  width: 70%;
 }
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+.nav-footer {
+  padding-left: 170px;
 }
+
+.nav-ftr a, .srvs-ftr a {
+  text-decoration: none !important;
+  color: var(--white-color) !important;
+}
+
+.nav-ftr a:hover, .srvs-ftr a:hover {
+  color: var(--primary-color) !important;
+}
+
+
+@media screen and (max-width: 767px) {
+  .footer {
+    padding: 40px 40px !important;
+  }
+  .nav-footer {
+    padding-left: 0px;
+  }
+  .nav-ftr {
+    padding-left: 12px;
+  }
+  .services-footer {
+    padding-left: 0px;
+  }
+  .srvs-ftr {
+    padding-left: 12px;
+  }
+  .footer .me-5 {
+    margin-right: 0 !important;
+  }
+  .footer-logo {
+    margin: 0 auto;
+  }
+  .description {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  .cnt, .srvs {
+    padding-left: 0 !important;
+  }
+  .span {
+    font-size: 12px;
+  }
+  .copyright {
+    font-size: 10px;
+  }
+  
+}
+
+
