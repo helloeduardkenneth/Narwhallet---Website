@@ -309,14 +309,6 @@ a {
   margin: 0 auto !important;
 }
 
-.brand-logo {
-  transition: .5s;
-}
-
-.brand-logo:hover {
-  filter: grayscale(0);
-  transform: scale(0.9);
-}
 
 @media screen and (max-width: 767px) { 
   .trust-section {
@@ -326,6 +318,9 @@ a {
     width: 40%;
     margin: 0 auto;
     padding-bottom: 4rem;
+  }
+  .trusted-heading {
+    font-size: var(--h4-font-size) !important;
   }
 }
 
