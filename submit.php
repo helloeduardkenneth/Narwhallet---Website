@@ -1,4 +1,5 @@
 <?php
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Get the form data
   $first_name = $_POST["first_name"];
@@ -34,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           VALUES ('$first_name', '$last_name', '$contact_number', '$email_address', '$position', '$company_name', '$website', '$description_company')";
 
 
-  if ($conn->query($sql) === TRUE) {
+  if ($conn -> query($sql) === TRUE) {
   // Handle the successful submission
     echo "Thank you for contacting us!";
   } else {

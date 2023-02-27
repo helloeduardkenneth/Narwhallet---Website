@@ -21,6 +21,8 @@
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
 
     <link rel="stylesheet" href="assets/css/Narwhallet.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -56,7 +58,7 @@
   <section class="hero" id="hero">
       <div class="container">
           <div class="row align-items-center">
-              <div class="col-lg-6">
+              <div class="col-lg-6" data-aos="fade-right" data-aos-duration="2000">
                   <h1 class="hero-heading mb-4">Making digital payments secure, easy and accessible to all.</h1>
                   <p class="hero-paragraph mb-4">Provide your customer a seamless transaction through an all-in-one payment platform.</p>
                   <a role="button" class="hero-btn" href="contact.html">Get Started</a>
@@ -66,11 +68,11 @@
   </section>
 
   <section class="trust-section section-padding" id="partners">
-    <div class="container" data-aos="fade-up" data-aos-duration="2000">
+    <div class="container">
       <div class="mb-4">
         <h1 class="trusted-heading">Clientele</h1>
       </div>
-        <div class="row justify-content-evenly partners-logo">
+        <div class="row justify-content-evenly partners-logo" data-aos="fade-right" data-aos-duration="2000">
             <div class="col-lg-2 col-md-6 col-sm-12 d-flex align-items-center">
                 <a href="https://www.newbie.linkocity.net">
                     <img class="img-fluid brand-logo" src="assets/images/newbie.png" alt="newbie">
@@ -100,7 +102,7 @@
           <div class="col-lg-6">
               <img class="pt-5 img-fluid m-auto" src="assets/images/image.png" alt="">
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-duration="2000">
               <div class="row flex-column justify-content-start">
                     <div class="service-item">
                       <div class="service-icon">
@@ -139,7 +141,7 @@
               <h4 class="section-heading">Value Proposition</h4>
               <h2 class="section-subheading">Why Choose Us</h2>
           </div>
-            <div class="card-container">
+            <div class="card-container" data-aos="fade-right" data-aos-duration="2000">
               <div class="card">
                 <i class="fas fa-bolt"></i>
                 <h4>Fast Integration</h4>
@@ -191,7 +193,7 @@
   </section>
 
   <section class="cta-section" id="cta">
-    <div class="container">
+    <div class="container" data-aos="fade-down" data-aos-duration="2000">
       <h2>Want to learn more? Book a call with our Solution Experts.</h2>
       <a role="button" href="contact.html" class="cta-btn">Get Started</a>
     </div>
@@ -265,6 +267,12 @@
 
   <!-- Global Init -->
   <script src="assets/js/custom.js"></script>
+
+  <!-- AOS Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 </body>
 
