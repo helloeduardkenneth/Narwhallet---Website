@@ -85,7 +85,7 @@ a {
 
 .navbar {
   background: var(--white-color);
-  opacity: 0.9;
+  opacity: 1;
   position: sticky;
   top: 0px;
   right: 0;
@@ -289,6 +289,18 @@ a {
 .trust-section {
   width: 100%;
   padding: 100px 0;
+}
+
+.trusted-heading {
+  text-align: center;
+  font-family: var(--body-font-family);
+  font-weight: 700;
+  font-size: var(--h1-font-size);
+  background-color: #0093E9;
+  background-image: linear-gradient(to right top, #0093E9 0%, #80D0C7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .partners-logo {
@@ -547,7 +559,6 @@ img {
 }
 
 .section-heading {
-  color: #1C2331;
   font-weight: 700;
   margin-bottom: 10px;
   font-size: var(--h1-font-size);
