@@ -1,6 +1,7 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  
   // Get the form data
   $first_name = $_POST["first_name"];
   $last_name = $_POST["last_name"];
