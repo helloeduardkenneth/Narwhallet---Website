@@ -70,12 +70,7 @@
       border-bottom-left-radius: 0;
       box-shadow: none;
       background: rgba(255, 255, 255, 0.2);
-    }
-
-    .form-signin input[type="text"]::placeholder {}
-
-    .form-signin input[type="text"]:focus {
-      border: 1px solid #bdbdbd;
+      color: #FFFFFF;
     }
 
     .form-signin input[type="password"] {
@@ -94,51 +89,49 @@
   </style>
 
   <body class="text-center">   
+    <div class="form-signin w-100 mx-auto">
+        <?php
+        session_start();
 
-  <div class="form-signin w-100 mx-auto">
-      <?php
-      session_start();
-
-      if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
-        header("location: dashboard.php");
-        exit;
-      }
-
-      if (isset($_POST['username']) && isset($_POST['password'])) {
-        if ($_POST['username'] === 'admin' && $_POST['password'] === 'narwhaladmin') {
-          $_SESSION['loggedin'] = true;
+        if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
           header("location: dashboard.php");
           exit;
-        } else {
-          $login_err = "Invalid username or password";
         }
-      }
-      ?>
-    
-      <?php if (isset($login_err)): ?>
-          <div class="alert alert-danger"><?= $login_err ?></div>
-      <?php endif; ?>
 
-    <form method="post">
+        if (isset($_POST['username']) && isset($_POST['password'])) {
+          if ($_POST['username'] === 'admin' && $_POST['password'] === 'narwhaladmin') {
+            $_SESSION['loggedin'] = true;
+              header("location: dashboard.php");
+              exit;
+          } else {
+            $login_err = "Invalid username or password";
+          }
+        }
+        ?>
+      
+        <?php if (isset($login_err)): ?>
+            <div class="alert alert-danger"><?= $login_err ?></div>
+        <?php endif; ?>
 
-      <img class="my-4 mx-auto" src="assets/images/narwhallet.png" alt="" width="100" height="60">
-      <h1 class="h3 mb-3 fw-bold text-white">NarwhalPay (Admin)</h1>
+      <form method="post">
 
-      <div class="form-floating">
-        <input type="text" class="form-control" id="username" name="username" placeholder="Username">
-        <label for="username">Username</label>
-      </div>
+        <img class="my-4 mx-auto" src="assets/images/narwhalpayblk-logo.svg" alt="" width="500" height="100">
+        <h1 class="h3 mb-3 fw-bold text-white">Dashboard</h1>
 
-      <div class="form-floating">
-        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
-        <label for="password">Password</label>
-      </div>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+          <label for="username">Username</label>
+        </div>
 
-      <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-      <p class="mt-5 mb-3 text-white">&copy; NarwhalPay - Payment Gateway</p>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+          <label for="password">Password</label>
+        </div>
 
-    </form>
-  </div>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+        <p class="mt-5 mb-3 text-white">&copy; NarwhalPay - Payment Gateway</p>
 
+      </form>
+    </div>
   </body>
 </html>
